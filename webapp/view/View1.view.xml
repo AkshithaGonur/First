@@ -1,0 +1,57 @@
+<mvc:View 
+controllerName="com.cg.Exercise.controller.View1" 
+xmlns:l="sap.ui.layout"
+xmlns:mvc="sap.ui.core.mvc" 
+displayBlock="true" 
+xmlns="sap.m">
+<Shell id="shell">
+		<App id="app">
+			<pages>
+				<Page id="page" title="{i18n>title}">
+					<customHeader>
+	            	<Bar>
+	            	<contentMiddle>
+	            			<Text text = "TITLE"></Text>
+	            	</contentMiddle>
+	            	</Bar>
+	           	</customHeader>
+	           	<l:VerticalLayout
+		class="sapUiContentPadding"
+		width="100%">
+					<l:content>
+				<Label text="Label A (required)" labelFor="a"/>
+			<Input id="a" required="true"/>
+			<Label text="Label B (bold)" labelFor="input-b" design="Bold" />
+			<Input id="input-b"/>
+			<Label text="Label C (normal)" labelFor="input-c"/>
+			<Input id="input-c"/>
+		<VBox class="sapUiSmallMargin">
+			<Label labelFor="rbg3" text="SELECT ONE RADIO BUTTON" />
+		<RadioButtonGroup id="rbg3" columns="2" valueState="Success">
+			<RadioButton id="RB3-1" text="YES" />
+			<RadioButton id="RB3-2" text="NO" />
+		</RadioButtonGroup>
+		</VBox>
+		<IconTabBar
+		id="idIconTabBarMulti"
+		expanded="{device>/isNoPhone}"
+		class="sapUiResponsiveContentPadding">
+		<items>
+			<IconTabFilter
+				icon="sap-icon://activities">
+				<Text text="Info content goes here ..." />
+			</IconTabFilter>
+			<IconTabFilter
+				icon="sap-icon://travel-expense"
+				count="3">
+				<Text text="Attachments go here ..." />
+			</IconTabFilter>
+				</items>
+	</IconTabBar>
+                  </l:content>
+	</l:VerticalLayout>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>
